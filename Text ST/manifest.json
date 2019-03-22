@@ -1,0 +1,23 @@
+{
+  "name": "Text Scale Target",
+  "short_name": "Text ST",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fff",
+  "theme_color": "#111",
+  "icons": [
+    {
+      "src": "https://wicg.github.io/web-share-target/demos/images/icon-512.png",
+      "sizes": "512x512"
+    }
+  ],
+  "share_target": {
+    "action": "./",
+    "params": {
+      "title": "share-title",
+      "text": "share-text",
+      "url": "share-url"
+    }
+  }
+}

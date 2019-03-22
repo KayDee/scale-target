@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://wicg.github.io/web-share-target/demos/images/icon-512.png" rel="icon">
+  <link rel="manifest" href="./manifest.json">
+  <title>Text ST</title>
+</head>
+<body>
+  
+</body>
+<script>
+
+  navigator.serviceWorker.register('sw.js')
+      
+      const p = document.createElement('p')
+      p.textContent = `URL is ${location.href}`
+      document.body.append(p)
+      
+      const ol = document.createElement('ol')
+      document.body.append(ol)
+      const url = new URL(location)
+      
+      for (const [key, val] of url.searchParams) {
+        const li = document.createElement('li')
+        li.textContent = `${key} = ${val}`
+        ol.append(li)
+      }
+    
+  </script>
+</html>
